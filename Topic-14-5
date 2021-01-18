@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+    char *locale = setlocale(LC_ALL, "");
+    int b;
+    int a;
+    int answer = 0;
+    printf("Введите A: ");
+    scanf("%d", &a);
+    printf("Введите B: ");
+    scanf("%d", &b);
+    while ((a!=0)&(b!=0))
+    {
+        if (a>b)
+            a=a%b;
+        else
+            b=b%a;
+    }
+    printf("%d \n",a+b);
+    return 0;
+}
