@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main ()
+{
+    char *locale = setlocale(LC_ALL, "");
+    int P;
+    int a;
+    int answer = 0;
+    printf("Введите P: ");
+    scanf("%d", &P);
+    float S = 1000;
+    int K = 0;
+    for(;S < 1100;K++)
+    {
+    S = S*(P*0.01)+S;
+    }
+    printf("%g \n", S);
+    printf("%d", K);
+    return 0;
+}
